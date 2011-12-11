@@ -8,14 +8,6 @@
 	<%= f.text_field :email%>
 </div>
 <div class="field">
-	<%= f.label :password %>
-	<%= f.password_field :password%>
-</div>
-<div class="field">
-	<%= f.label :password_confirmation, "Confirmation" %>
-	<%= f.password_field :password_confirmation%>
-</div>
-<div class="field">
 	<%= f.label :medicalhistory %><br/>
 	<%= f.text_area:medicalhistory%>
 </div>
@@ -30,4 +22,12 @@
 <div class="field">
 	<%= f.label :appointments %><br/>
 	<%= f.text_area :appointments%>
+</div>
+<div class="field">
+	<%= f.label :password %>
+	<%= f.password_field :password%>
+</div>
+<div class="field">
+	<%= f.label :password_confirmation, "Confirmation" %>
+	<%= f.password_field :password_confirmation%>
 </div>
