@@ -42,33 +42,33 @@
 				<%= current_user.name %>'s Medical History
 			</h1>
 			<p>
-				The terms medical record, health record, and medical chart are used somewhat interchangeably to describe the systematic documentation of a single patient's medical history and care across time within one particular health care provider's jurisdiction.[1]. The medical record includes a veriety of types of "notes" entered over time by health care professionals, recording observations and administration of drugs and therapies, orders for the administration of drugs and therapies, test results, x-rays, reports, etc. The maintenance of complete and accurate medical records is a fundamental requirement of health care providers and is generally enforced as a licensing or certification prerequisite.
-				The terms are used for both the physical folder that exists for each individual patient and for the body of information found therein.
+				<%= current_user.medicalhistory %>
 				
 			</p>
 			<h3>
 				Allergies
 			</h3>
 			<p>
-				Medical records have traditionally been compiled and maintained by health care providers, but advances in online data storage have led to the development of personal health records (PHR) that are maintained by patients themselves, often on third-party websites[2]. This concept is supported by US national health administration entities[3] and by AHIMA, the American Health Information Management Association.[4]
+				<%= current_user.allergies %>
 			</p>
 			<h3>
 				Family History
 			</h3>
 			<p>
-				Medical records have traditionally been compiled and maintained by health care providers, but advances in online data storage have led to the development of personal health records (PHR) that are maintained by patients themselves, often on third-party websites[2]. This concept is supported by US national health administration entities[3] and by AHIMA, the American Health Information Management Association.[4]
+				<%= current_user.familyhistory %>
 			</p>
+			
 		</div>
 		<div id="aside">
 			<h3>
 				Instructions
 			</h3>
 			<p>
-				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+				You can edit your medical history by hitting the edit button at the bottom of the page
 			</p>
 		</div>
 		<div id="footer">
-			Copyright © Site name, 2011
+			Copyright © PMR.com, 2011
 		</div>
 	</div>
 </div>

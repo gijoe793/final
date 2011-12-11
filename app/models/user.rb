@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :medicalhistory, :allergies, :familyhistory, :appointments
+  
+
  
   has_many :MedicalHistory, :dependent => :destroy
   

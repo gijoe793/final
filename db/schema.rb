@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(:version => 20111210215706) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "medicalhistory"
+    t.text     "allergies"
+    t.text     "familyhistory"
+    t.text     "appointments"
     t.string   "encrypted_password"
     t.string   "salt"
   end

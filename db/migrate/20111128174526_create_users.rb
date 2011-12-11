@@ -6,5 +6,11 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+      add_column :users, :medicalhistory, :text
+      add_column :users, :allergies, :text
+      add_column :users, :familyhistory, :text
+      add_column :users, :appointments, :text
+    
   end
 end
