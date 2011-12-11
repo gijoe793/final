@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Website Name</title>
+<%= stylesheet_link_tag 'images_style_sheet.css', :media => 'screen' %>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>
+			Scans</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			
+			<li><%= link_to "Home", user_path(current_user)%></li>	
+			<li><%= link_to "Medical Record", record_path%></li>
+			<li><%= link_to "Scans/Images", images_path %></li>
+			<li><%= link_to "Doctors", doctors_path %></li>
+			
+			<% if signed_in? %>
+				<li><%= link_to "Sign out", signout_path%></li>
+				<% else %>
+				<li><%= link_to "Sign in", signin_path%></li>
+			<% end %>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="section-navigation" style="height: 224px">
+			<ul>
+				<li><a href="#">Option 1</a></li>
+				<li><a href="#">Option 2</a></li>
+				<li><a href="#">Option 3</a></li>
+				<li style="height: 24px"><a href="#">Option 4</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<h2>
+				<%= current_user.name %>'s Scans</h2>
+			<p>
+				<%= image_tag "shoulder_xray.jpg", :alt => 'Shoulder', :height => 184, :width => 159 %> </p>
+			<p style="height: 18px">
+				<%= image_tag "tooth_xray.jpg", :alt => 'Tooth', :height => 142, :width => 201 %> </p>
+			<p style="height: 18px">
+				&nbsp;</p>
+			<p style="height: 18px">
+				&nbsp;</p>
+			<p style="height: 18px">
+				&nbsp;</p>
+			<p style="height: 18px">
+				&nbsp;</p>
+			<p style="height: 18px">
+				&nbsp;</p>
+		</div>
+		<div id="aside">
+			<h3>
+				Instructions
+			</h3>
+			<p>
+				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © Site name, 2011
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+

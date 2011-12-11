@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Website Name</title>
+
+<%= stylesheet_link_tag 'home_style_sheet.css', :media => 'screen' %>
+
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>
+			Personal Medical Record
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><%= link_to "Home", user_path(current_user)%></li>	
+			<li><%= link_to "Medical Record", record_path%></li>
+			<li><%= link_to "Scans/Images", images_path %></li>
+			<li><%= link_to "Doctors", doctors_path %></li>
+			
+			<% if signed_in? %>
+				<li><%= link_to "Sign out", signout_path%></li>
+				<% else %>
+				<li><%= link_to "Sign in", signin_path%></li>
+			<% end %>
+		</ul>
+	</div>
+	<div id="content-container">
+		
+		<div id="content">
+			<p id="notice"><%= notice %></p>
+			<table class="profile" summary="Profile Information">
+				<tr>
+					<td class="main">
+						<h1>
+							<%= @user.name %><br/><br/>
+			  				<%= image_tag "blank_profile.jpg", :alt => 'Pic' %>
+			  			</h1>
+						<h3>
+							<br/>
+							<strong>Name</strong> <%= @user.name %><br /">
+							<strong>Email</strong> <%= @user.email %><br /">
+				  			<strong>URL</strong> <%= link_to user_path(@user), @user %><br/>
+							<%= link_to "update profile", edit_user_path(@user)%><br /"><br/>
+							
+							<% if @user.MedicalHistory.any? %>
+								<table class="MedicalHistory" summary="Medical History">
+									<%= render @MedicalHistory %> 
+								</table>
+							<% end %>
+							
+					
+							
+						</h3>
+			  		</td>
+			  			
+			  		
+				</tr>
+			</table>
+
+			<!--<%= link_to 'Edit', edit_user_path(@user) %> |
+			<%= link_to 'Back', users_path %><br />
+			-->
+			<br/>
+			<p style="height: 18px" class="auto-style1">
+				&nbsp;</p>
+			
+		</div>
+		<div id="aside">
+			<h3>
+				Instructions
+			</h3>
+			<p>
+				Once you have created an account, log in. 
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © Site name, 2011
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Website Name</title>
+
+<%= stylesheet_link_tag 'home_style_sheet.css', :media => 'screen' %>
+
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>Personal Medical Record</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			
+		</ul>
+	</div>
+	<div id="content-container">
+		
+		<div id="content">
+			<h1>Sign up</h1>
+			<%= form_for(@user) do |f| %>
+				<%= render 'fields', :f => f  %>
+				<div class="actions">
+					<%= f.submit "Sign up"%>
+				</div>
+			<% end %>
+		</div>
+		<div id="aside">
+			<h3>
+				Instructions
+			</h3>
+			<p>
+				Sign up to create your Personal Medical Record
+			</p>
+		</div>
+		<div id="footer">
+			Copyright © Site name, 2011
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+
