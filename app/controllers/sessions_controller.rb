@@ -21,5 +21,10 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_path
   end
+  
+  def signin
+    @title = "Sign in"
+    render 'new'
+  end
 
 end

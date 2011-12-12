@@ -8,7 +8,7 @@ ProjectSetup::Application.routes.draw do
   
   resources :MedicalHistory, :only => [:create, :destroy]
 
-  root :to => "pages#home"
+  root :to => "sessions#signin"
   get "pages/signup"
 
   get "pages/images"
