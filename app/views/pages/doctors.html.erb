@@ -30,6 +30,7 @@
 	</div>
 	<div id="content-container">
 		<div id="section-navigation" style="height: 224px">
+			<p>
 			<br/>
 			<strong>Name:</strong><br/>
 			<%= current_user.name%><br/>
@@ -37,7 +38,7 @@
 			<%= current_user.email%><br/><br/>
 			<strong>URL:</strong> <%= link_to user_path(current_user), current_user %><br/><br/>
 			<%= link_to "Update Profile", edit_user_path(current_user)%><br /"><br/>
-			
+			</p>
 		</div>
 		<div id="content">
 			<h2>

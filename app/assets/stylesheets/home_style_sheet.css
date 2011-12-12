@@ -73,6 +73,11 @@ left: auto;
 border-radius: 5px 5px 5px 5px;
 }
 
+#section-navigation p
+{
+margin: 5px 5px 5px 5px;
+}
+
 #section-navigation ul
 {
 margin: 0;
