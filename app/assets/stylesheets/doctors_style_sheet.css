@@ -40,7 +40,7 @@ display: inline;
 
 #navigation li a
 {
-width: 179px;
+width: 189px;
 display: block;
 float: left;
 padding: 5px 5px;
@@ -65,7 +65,7 @@ background: #fff url('/../../../../../wp-content/uploads/layout-three-fixed-back
 {
 float: left;
 width: 160px;
-padding: 0px 0;
+padding: 0px 0px ;
 margin: 0 0;
 display: inline;
 background:gray;
